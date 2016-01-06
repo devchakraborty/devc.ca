@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --progress --hot --port=9000",
-    "build": "webpack --progress"
+    "build": "webpack --progress",
+    "deploy": "npm run build && cd build && aws --profile devc s3 sync . s3://devc.ca/"
   },
   "author": "",
   "license": "ISC",
