@@ -9,7 +9,7 @@ window.onload = () => {
 
 	// Get PDF link from Webpack
 
-	$("#cv").attr("href", require('../downloads/CV.pdf'))
+	$("#cv").attr("href", require('../downloads/CV.pdf'));
 
 	// Google Analytics
 
