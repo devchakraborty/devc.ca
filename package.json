@@ -1,32 +1,36 @@
 {
-  "name": "09_2015",
+  "name": "devc.ca",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "My personal site, devc.ca",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline --progress --hot --port=9000",
-    "build": "webpack --progress",
-    "deploy": "npm run build && cd build && aws --profile devc s3 sync . s3://devc.ca/"
+    "build": "webpack --colors --progress",
+    "start": "bash run.sh"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "babel-core": "^5.8.25",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.19.0",
-    "file-loader": "^0.8.4",
-    "html-loader": "^0.3.0",
-    "jquery": "^2.1.4",
-    "lodash": "^3.10.1",
-    "node-sass": "^3.3.3",
-    "postcss-loader": "^0.6.0",
-    "react-hot-loader": "^1.3.0",
-    "sass-loader": "^2.0.1",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.12.4",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.12.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devchakraborty/devc.ca.git"
+  },
+  "author": "Dev Chakraborty (hello@devc.ca)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devchakraborty/devc.ca/issues"
+  },
+  "homepage": "https://github.com/devchakraborty/devc.ca#readme",
+  "dependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "sass-loader": "^3.2.0",
+    "static-site-generator-webpack-plugin": "^2.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14"
   }
 }
