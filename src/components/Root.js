@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 const data = require('../../data')
 
 function prefix(p, s) {
@@ -76,7 +77,7 @@ class Root extends React.Component {
     let list = attributes.links
     var root = this
     let links = list.map(function(item) {
-      return <li><Link href={item.link} onClick={pathChanger(root, item.link)} key={item.text}>{item.text.toLowerCase()}</Link></li>
+      return <li key={item.text}><Link href={item.link} onClick={pathChanger(root, item.link)}>{item.text.toLowerCase()}</Link></li>
     })
 
     var firstSplit = docTitle.indexOf(" :: ")
@@ -87,7 +88,9 @@ class Root extends React.Component {
         <div id="root">
           <h1 id="title"><Link href={prevPath} onClick={pathChanger(root, prevPath)}>{docTitlePrefix.toLowerCase()}</Link>{docTitleSuffix.toLowerCase() + " \{"}</h1>
           <nav>
-            <ul>{links}</ul>
+            <ReactCSSTransitionGroup component="ul" transitionName="list-item" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+            {links}
+            </ReactCSSTransitionGroup>
           </nav>
         </div>
     )
