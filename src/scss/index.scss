@@ -1,72 +1,54 @@
-@import "reset";
+// Reset
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
 body {
-	background: #eaeaea;
-	font-family: "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+	background: #282828;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
 	overflow: hidden;
-	white-space: nowrap;
-}
-
-.black-fg {
-	color: #000000;
-	opacity: 0.6;
-}
-
-.black-fg-deep {
-	color: #000000;
-	opacity: 0.8;
-}
-
-.black-bg {
-	background: #000000;
-	opacity: 0.6;
-}
-
-.black-bg-deep {
-	background: #000000;
-	opacity: 0.8;
 }
 
 #logo {
-	@extend .black-fg;
+	width: 120px;
+	height: 44px;
 	position: fixed;
 	left: 50%;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	margin-top: -60px;
 	display: block;
-	font-size: 60px;
-	font-family: 'Futura PT', Helvetica, Arial, Verdana, sans-serif;
+	text-indent: -9999px;
+	background: url('../img/logo.svg');
+	background-size: contain;
 }
 
 #subtitle {
-	@extend .black-fg;
+	color: #dddddd;
 	position: fixed;
 	text-align: center;
 	top: 50%;
 	display: block;
 	width: 100%;
-	font-size: 18px;
+	height: 16px;
+	font-size: 16px;
 	transform: translateY(-50%);
 
-	font-family: 'Source Sans Pro', Helvetica, Arial, Verdana, sans-serif;
+	font-family: 'Whatever It Takes';
 	font-size: 24px;
 }
 
 a {
-	@extend .black-fg;
+	color: #cccccc;
 	text-decoration: none;
 }
 
 a:hover {
-	@extend .black-fg-deep;
+	color: #fafafa;
 }
 
 #links {
-	width: 200px;
+	width: 100%;
 	position: fixed;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 0;
 	top: 50%;
 	margin-top: 44px;
 	text-align: center;
@@ -74,45 +56,11 @@ a:hover {
 	font-size: 20px;
 
 	li {
-		float: left;
-		text-align: center;
+		display: inline-block;
+		margin-right: 10px;
+	}
 
-		a {
-			height: 40px;
-			width: 40px;
-			line-height: 40px;
-			display: block;
-		}
-
-		&.middle {
-
-			a {
-				border-top: #000000 solid 2px;
-				border-bottom: #000000 solid 2px;
-			}
-
-			a:hover {
-				@extend .black-bg;
-				color: #ffffff;
-			}
-
-			&.middle-left {
-				a {
-					border-top-left-radius: 20px;
-					border-bottom-left-radius: 20px;
-					border-left: #000000 solid 2px;
-					width: 38px;
-				}
-			}
-
-			&.middle-right {
-				a {
-					border-top-right-radius: 20px;
-					border-bottom-right-radius: 20px;
-					border-right: #000000 solid 2px;
-					width: 38px;
-				}
-			}
-		}
+	li:last-child {
+		margin-right: 0;
 	}
 }
