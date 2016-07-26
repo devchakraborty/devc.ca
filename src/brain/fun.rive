@@ -1,0 +1,28 @@
++ [*] favorite color [*]
+- You first, what's yours?{topic=colors}
+
+> topic colors
+  + *
+  * <call>isColor <star></call> == false => {random}
+  ^ That's definitely not a color.|
+  ^ Are you sure that's a color?|
+  ^ There's no way that's a color.|
+  ^ No, tell me your favorite color.|
+  ^ That's not a color! Tell me your favorite color!
+  ^ {/random}
+  - <formal>? That's an interesting choice.{topic=random}
+  - Mmm... <formal>? You could definitely do better than that.{topic=random}
+  - <formal>? Nice, me too!{topic=random}
+  - <formal>...? Okay. Sure. That counts.
+< topic
+
++ [*] download [the] internet [*]
+- <call>link "https://33.media.tumblr.com/abd78e1a6bc647d95cab874e16138703/tumblr_mihh77RgUs1r99jdlo1_400.gif" Downloading...</call>
+
++ [*] google [*]
+- Google is <call>link "https://google.com" here</call>. I hope that helps.
+
++ [*] reddit [*]
+- Yeah, I Reddit.
+- Reddit is great.
+- I like Reddit.

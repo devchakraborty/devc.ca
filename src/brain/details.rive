@@ -1,0 +1,97 @@
++ [*] about [*]
+- I'm Dev, a CS student at UWaterloo. I build Internet products.<br>I'm currently at <call>link shopify Shopify</call>. Before, I was a co-founder at <call>link edusight Edusight</call>.
+
++ [*] who [*]
+@ about
+
++ [*] resume [*]
+- <call>link resume "Here's my resume."</call> Enjoy! Feel free to <call>link email "email me"</call> if you have any questions.
+
++ [*] cv [*]
+@ resume
+
++ [*] skills [*]
+@ resume
+
++ [*] projects [*]
+@ resume
+
++ [*] email [*]
+- My email's <call>link email hello@devc.ca</call>.
+
++ [*] contact [*]
+@ email
+
++ [*] school [*]
+- I study computer science at UWaterloo.
+
++ [*] college [*]
+@ school
+
++ [*] university [*]
+@ school
+
++ [*] hometown [*]
+- I grew up near Toronto, Canada.
+- I call Toronto, Canada home.
+- I'm from Toronto, Canada.
+- Toronto, Canada, heard of it? Drake's from around here.
+- Toronto, Canada, of NBA glory.
+
++ where were you born
+- I was born in Minnesota.
+- Minnesota.
+
++ [*] birthplace [*]
+@ where were you born
+
++ [*] high school [*]
+- I went to The Woodlands School in Canada.
+- The Woodlands, this high school in Canada.
+- I went to The Woodlands School, a high school in Canada.
+
++ [*] facebook [*]
+- Yeah, <call>link facebook "add me on Facebook!"</call>
+- I have Facebook, <call>link facebook "add me!"</call>
+
++ [*] twitter [*]
+- I have Twitter but I don't really tweet.
+- I'm more of a passive Twitter user. You won't enjoy following me.
+- Trust me, it's not worth following me on Twitter.
+
++ [*] pinterest [*]
+- I don't use Pinterest.
+
++ [*] github [*]
+- Check out my mad hacker skills <call>link github "here"</call>.
+- Here's my <call>link github "GitHub"</call>!
+- Behold, <call>link github "my GitHub profile"</call>.
+
++ [*] linkedin [*]
+- Yeah, let's link up? <call>link linkedin "Here's my profile."</call>
+- Here's my <call>link linkedin LinkedIn</call>.
+
++ [*] blog [*]
+- I write on <call>link medium Medium</call> sometimes.
+
++ [*] medium [*]
+@ blog
+
++ [*] tumblr [*]
+- People still use Tumblr?!
+- I don't use Tumblr.
+
++ [*] instagram [*]
+- You can check out my amazing photography skills (not) <call>link instagram here</call>.
+
++ [*] job [*]
+- I'm currently at <call>link shopify Shopify</call>. I was previously a co-founder at <call>link edusight Edusight</call>.
+
++ [*] work [*]
+@ job
+
++ [*] shopify [*]
+- <call>link shopify Shopify</call> makes it super easy to set up an online store.
+
++ [*] edusight [*]
+- <call>link edusight Edusight</call> is reimagining K-12 education technology.

@@ -1,0 +1,75 @@
+$font-stack:  'proxima-nova', 'San Francisco', Helvetica, sans-serif
+
+html, body
+  height: 100%
+
+body
+  font: 100% $font-stack
+  background: radial-gradient(at top, rgb(76, 156, 177) 0%, rgb(37, 99, 121) 100%)
+  font-weight: 100
+  margin: 0 50px
+
+b
+  font-weight: 500
+
+.output
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  text-align: center
+  color: rgb(139, 213, 240)
+  font-size: 50px
+  line-height: 80px
+  width: 80%
+
+  b, a
+    color: rgb(214, 237, 246)
+
+a
+  text-decoration: none
+  border-bottom: rgb(214, 237, 246) solid 3px
+  transition: color .2s ease-in-out
+
+a:hover
+  color: rgb(255, 255, 255)
+
+.input
+  position: fixed
+  left: 50%
+  bottom: 30px
+  transform: translateX(-50%)
+  text-align: center
+  width: 100%
+
+  input
+    font-size: 30px
+    border: 0
+    outline: none
+    background: none
+    text-align: center
+    color: rgb(214, 237, 246)
+    font-family: 'proxima-nova'
+    font-weight: 100
+    width: 100%
+
+    &::placeholder
+      color: rgb(139, 213, 240)
+      transition: color .7s ease
+
+.input.bright
+  input::placeholder
+    color: rgb(214, 237, 246)
+
+@media only screen and (max-width: 550px)
+  body
+    margin: 0 30px
+
+  .output
+    font-size: 30px
+    line-height: 48px
+
+  .input
+    bottom: 20px
+    input
+      font-size: 20px

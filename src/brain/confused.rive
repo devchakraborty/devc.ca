@@ -1,0 +1,4 @@
++ *
+- My bot doesn't know how to respond. Maybe you should <call>link email "email me"</call>.
+- Sorry, my bot got stuck. <call>link email "Email me?"</call>
+- Yikes! My bot's got no idea what you mean. Try <call>link email "emailing me"</call>, I'm actually a human.

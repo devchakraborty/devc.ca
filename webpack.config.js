@@ -5,8 +5,9 @@ var env = process.env.NODE_ENV;
 
 module.exports = {
 	entry: {
+    html: './src/index.html',
 		javascript: './src/js/index.js',
-		html: './src/index.html'
+    css: './src/sass/index.sass'
 	},
 	output: {
 		path: './build',
@@ -24,14 +25,20 @@ module.exports = {
 				test: /\.js$/, exclude: /node_modules/, loader: (env=='production'?'':'source-map!')+'babel'
 			},
 			{
-				test: /\.(css|scss)$/, loader: 'style!css!postcss!sass'
-			}
+				test: /\.(css|scss|sass)$/, loader: 'file?name=bundle.css!postcss!sass'
+			},
+      {
+        test: /\.rive$/, loader: 'file?name=[name].[ext]'
+      },
+      {
+        test: /\.json$/, loader: 'json'
+      }
 		]
 	},
 	devServer: {
 		contentBase: './build',
 		historyApiFallback: true,
-		port: 7000
+		port: 8000
 	},
 	postcss: function() {
 		return [autoprefixer];
