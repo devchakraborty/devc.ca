@@ -19,6 +19,9 @@ module.exports = {
 				test: /\.(html)$/, loader: 'file?name=[name].[ext]'
 			},
 			{
+				test: /\.ico$/, loader: 'file?name=[name].[ext]'
+			},
+			{
 				test: /\.(png|jpg|svg|eot|ttf|woff|woff2|pdf)$/, loader: 'url?limit=8192'
 			},
 			{

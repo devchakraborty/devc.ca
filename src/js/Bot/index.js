@@ -57,13 +57,13 @@ export default class Bot {
       dom.attrs.href = resume
       dom.attrs.title = 'Download resume'
     } else if (type == 'email') {
-      dom.attrs.href = 'mailto:hello@devc.ca'
-      dom.attrs.title = 'Email hello@devc.ca'
+      dom.attrs.href = 'mailto:me@devc.ca'
+      dom.attrs.title = 'Email me@devc.ca'
     } else if (type == 'github') {
       dom.attrs.href = 'https://github.com/devchakraborty'
       dom.attrs.title = 'Visit GitHub'
     } else if (type == 'facebook') {
-      dom.attrs.href = 'https://facebook.com/debashic'
+      dom.attrs.href = 'https://facebook.com/debashisc'
       dom.attrs.title = 'Visit Facebook'
     } else if (type == 'linkedin') {
       dom.attrs.href = 'https://linkedin.com/in/chakrabortydev'

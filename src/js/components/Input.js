@@ -4,17 +4,20 @@ import {EventEmitter} from 'fbemitter'
 import mixins from 'es6-mixins'
 import $ from 'jquery'
 
+const ASK_PROMPT = 'Ask me anything (or ask for "help")'
+const RESPOND_PROMPT = 'Respond'
+
 export default class Input extends React.Component {
   constructor() {
     super()
     this.state = {
       input: '',
-      prompt: 'Ask me anything'
+      prompt: ASK_PROMPT
     }
     this.emitter = new EventEmitter()
     this.emitter.addListener('topic', (topic) => {
-      if (topic == 'random') this.setState({prompt: 'Ask me anything'})
-      else this.setState({prompt: 'Respond'})
+      if (topic == 'random') this.setState({prompt: ASK_PROMPT})
+      else this.setState({prompt: RESPOND_PROMPT})
     })
   }
 
