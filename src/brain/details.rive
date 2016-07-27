@@ -4,6 +4,9 @@
 + [*] who [*]
 @ about
 
++ [*] what do you do [*]
+@ about
+
 + [*] resume [*]
 - <call>link resume "Here's my resume."</call> Enjoy! Feel free to <call>link email "email me"</call> if you have any questions.
 
@@ -37,6 +40,9 @@
 - I'm from Toronto, Canada.
 - Toronto, Canada, heard of it? Drake's from around here.
 - Toronto, Canada, of NBA glory.
+
++ [*] where [are] you from [*]
+@ hometown
 
 + where were you born
 - I was born in Minnesota.
@@ -88,6 +94,9 @@
 - I'm currently at <call>link shopify Shopify</call>. I was previously a co-founder at <call>link edusight Edusight</call>.
 
 + [*] work [*]
+@ job
+
++ [*] occupation [*]
 @ job
 
 + [*] shopify [*]
