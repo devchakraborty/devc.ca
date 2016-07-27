@@ -7,6 +7,24 @@ import fun from '../../brain/fun.rive'
 import jsonxml from 'jsontoxml'
 import resume from '../../downloads/CV.pdf'
 import colors from './colors.json'
+import $ from 'jquery'
+import uuid from 'node-uuid'
+import striptags from 'striptags'
+
+const ID_DEFAULT = uuid.v4()
+
+function userId() {
+  return (typeof mixpanel !== 'undefined') ? mixpanel.get_distinct_id() : (localStorage.user_id || (localStorage.user_id = ID_DEFAULT))
+}
+
+function track(type, text) {
+  if (typeof mixpanel !== 'undefined') {
+    mixpanel.track('Message', {
+      content: striptags(text),
+      direction: type
+    })
+  }
+}
 
 export default class Bot {
   constructor() {
@@ -37,17 +55,14 @@ export default class Bot {
   }
 
   reply(id, text) {
+    track('incoming', text)
     let oldTopic = (this.rs.getUservars(id) || {topic:'random'}).topic
     let response = this.rs.reply(id, text)
     let newTopic = this.rs.getUservars(id).topic
     if (oldTopic != newTopic) {
       this.emitter.emit('topic', newTopic)
     }
-    if (typeof mixpanel !== 'undefined')
-      mixpanel.track('Message', {
-        content: text,
-        reply: response
-      })
+    track('outgoing', striptags(response))
     return response
   }
 
