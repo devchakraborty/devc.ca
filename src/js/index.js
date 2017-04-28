@@ -1,15 +1,8 @@
-require('../fonts/socialicious.css')
-require('../fonts/whatever_it_takes.css')
-require('../scss/index.scss')
+require('../index.html')
 
-// let React = require('react')
 let $ = require('jquery')
 
 window.onload = () => {
-
-	// Get PDF link from Webpack
-
-	$("#cv").attr("href", require('../downloads/CV.pdf'))
 
 	// Google Analytics
 

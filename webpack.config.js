@@ -1,30 +1,32 @@
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
+var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var env = process.env.NODE_ENV;
 
 module.exports = {
 	entry: {
-		javascript: './src/js/index.js',
-		html: './src/index.html'
+		'bundle.js': './src/js/index.js',
+		'bundle.css': './src/scss/index.scss'
 	},
 	output: {
-		path: './build',
-		filename: 'bundle.js'
+		path: path.resolve(__dirname, 'build'),
+		filename: '[name]'
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.(html)$/, loader: 'file?name=[name].[ext]'
+				test: /\.(html)$/, loader: 'file-loader?name=[name].[ext]'
 			},
 			{
-				test: /\.(png|jpg|svg|eot|ttf|woff|woff2|pdf)$/, loader: 'url?limit=8192'
+				test: /\.js$/, exclude: /node_modules/, loader: (env=='production'?'':'source-map-loader!')+'babel-loader'
 			},
 			{
-				test: /\.js$/, exclude: /node_modules/, loader: (env=='production'?'':'source-map!')+'babel'
-			},
-			{
-				test: /\.(css|scss)$/, loader: 'style!css!postcss!sass'
+				test: /\.(css|scss)$/, loader: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: 'css-loader!sass-loader'
+				})
 			}
 		]
 	},
@@ -33,10 +35,9 @@ module.exports = {
 		historyApiFallback: true,
 		port: 7000
 	},
-	postcss: function() {
-		return [autoprefixer];
-	},
-	plugins: env == 'production' ? [new webpack.optimize.UglifyJsPlugin({minimize:true, comments:false})] : []
+	plugins: [
+		new ExtractTextPlugin('bundle.css')
+	]
 };
 
 if (env == 'production')
